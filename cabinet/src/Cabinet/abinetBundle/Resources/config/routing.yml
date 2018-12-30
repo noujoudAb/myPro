@@ -1,0 +1,19 @@
+cabinetabinet_homepage:
+    path:     /home
+    defaults: { _controller: CabinetabinetBundle:Secretaire:index }
+
+cabinetabinet_registration_secretary:
+    path:     /registersecretary
+    defaults: { _controller: CabinetabinetBundle:Secretaire:registerSecretary }
+cabinetabinet_addrdv:
+    path:     /addrdv
+    defaults: { _controller: CabinetabinetBundle:Rendezvous:ajouterRDV }
+cabinetabinet_show:
+    path:     /showrdv
+    defaults: { _controller: CabinetabinetBundle:Rendezvous:afficherrdv}
+cabinetabinet_updaterdv:
+    path:     /updaterdv
+    defaults: { _controller: CabinetabinetBundle:Rendezvous:updateRDV}
+cabinetabinet_deleterdv:
+    path:     /deleterdv
+    defaults: { _controller: CabinetabinetBundle:Rendezvous:deleteRDV}

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Mirrored from wahabali.com/work/medical-guide/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Dec 2018 21:21:54 GMT -->
+<head>
+    <title>Medical Guide</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="icon" type="image/png" href="{{ asset('favicon.ico') }}">
+
+    <!--main file-->
+    <link href="{{ asset('cabinetassets/css/medical-guide.css') }}" rel="stylesheet" type="text/css">
+
+    <!--Medical Guide Icons-->
+    <link href="{{ asset('cabinetassets/fonts/medical-guide-icons.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- Default Color-->
+    <link href="{{ asset('cabinetassets/css/default-color.css') }}" rel="stylesheet" id="color"  type="text/css">
+
+    <!--bootstrap-->
+    <link href="{{ asset('cabinetassets/css/bootstrap.css') }}" rel="stylesheet" type="text/css">
+
+    <!--Dropmenu-->
+    <link href="{{ asset('cabinetassets/css/dropmenu.css') }}" rel="stylesheet" type="text/css">
+
+    <!--Sticky Header-->
+    <link href="{{ asset('cabinetassets/css/sticky-header.css') }}" rel="stylesheet" type="text/css">
+
+    <!--revolution-->
+    <link href="{{ asset('cabinetassets/css/style.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('cabinetassets/css/settings.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('cabinetassets/css/extralayers.css') }}" rel="stylesheet" type="text/css">
+
+    <!--Accordion-->
+    <link href="{{ asset('cabinetassets/css/accordion.css') }}" rel="stylesheet" type="text/css">
+
+    <!--tabs-->
+    <link href="{{ asset('cabinetassets/css/tabs.css') }}" rel="stylesheet" type="text/css">
+
+    <!--Owl Carousel-->
+    <link href="{{ asset('cabinetassets/css/owl.carousel.css') }}" rel="stylesheet" type="text/css">
+
+    <!-- Mobile Menu -->
+    <link rel="stylesheet" type="text/css" href="{{ asset('cabinetassets/css/jquery.mmenu.all.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ asset('cabinetassets/css/demo.css') }}" />
+
+    <!--PreLoader-->
+    <link href="{{ asset('cabinetassets/css/loader.css') }}" rel="stylesheet" type="text/css">
+
+    <!--switcher-->
+    <link href="{{ asset('cabinetassets/css/switcher.css') }}" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+
+<div id="wrap">
+
+    <!--Start Header-->
+    <div id="header-1">
+        <!--Start Header-->
+
+        <header class="header">
+            <div class="container">
+
+
+                <div class="row">
+
+                    {#<div class="col-md-9">#}
+                    {#<a href="#" class="logo"><img src="{{ asset('cabinetassets/images/logo.png') }}" alt=""></a>#}
+                    {#</div>#}
+
+                    <div class="col-md-9">
+
+
+                        <nav class="menu-2">
+                            <ul class="nav wtf-menu">
+                                <li class="parent"><a href="{{ path('cabinetabinet_homepage') }}">Home</a>
+                                </li>
+
+
+                                <li><a href="#">Appointment</a></li>
+
+                                <li class="parent"><a href="#">About Us</a>
+                                </li>
+
+                                <li class="parent"><a href="#">Contact Us</a>
+                                </li>
+
+                                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                                    <li class="parent"><a href="#">@username: {{ app.user.username }}</a>
+                                    </li>
+                                    <li class="parent"><a href="{{ path('fos_user_security_logout') }}">Logout</a>
+                                    </li>
+                                    </a>
+                                {% else %}
+                                    <li class="parent"><a href="{{ path('fos_user_security_login') }}">Sign in</a></li>
+                                    <li class="parent"><a href="#">Sign up</a>
+                                        <ul class="submenu">
+                                            <li class="parent"> <a href="{{ path('fos_user_registration_register') }}">Patient</a>
+                                            </li>
+                                            <li class="parent"> <a href="{{ path('cabinetabinet_registration_secretary') }}">Secretary</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                {% endif %}
+
+
+                            </ul>
+                        </nav>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+        </header>
+    </div>
+
+    <!--End Header-->
+
+
+    <!--Start Banner-->
+
+    <div class="banner-three">
+        <div class="main-banner-three">
+            <div class="container">
+                <div class="detail">
+                    <i class="icon-patient-bed"></i>
+                    <span class="title">Life can be Better</span>
+                    <p>If you need a doctor for to consectetuer Lorem ipsum dolor, consectetur adipiscing elit. Ut volutpat eros  adipiscing elit Ut volutpat. </p>
+                </div>
+            </div>
+        </div></div>
+
+    <!--End Banner-->
+
+
+
+    {% block fos_user_content %}
+    {% endblock fos_user_content %}
+
+
+
+    <!--Start Footer-->
+    <footer class="footer" id="footer">
+
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <span class="copyrights">Copyright &copy; 2018 Medical Guide. All right reserved.</span>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="social-icons">
+                            <a href="#." class="fb"><i class="icon-euro"></i></a>
+                            <a href="#." class="tw"><i class="icon-yen"></i></a>
+                            <a href="#." class="gp"><i class="icon-google-plus"></i></a>
+                            <a href="#." class="vimeo"><i class="icon-vimeo4"></i></a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </footer>
+    <!--End Footer-->
+
+
+
+
+</div>
+<a href="#0" class="cd-top"></a>
+
+
+
+<script type="text/javascript" src="{{ asset('cabinetassets/js/jquery.js') }}"></script>
+
+<!-- SMOOTH SCROLL -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/scroll-desktop.js') }}"></script>
+<script type="text/javascript" src="{{ asset('cabinetassets/js/scroll-desktop-smooth.js') }}"></script>
+
+<!-- START REVOLUTION SLIDER -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/jquery.themepunch.revolution.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('cabinetassets/js/jquery.themepunch.tools.min.js') }}"></script>
+
+
+<!-- Date Picker and input hover -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/classie.js') }}"></script>
+<script type="text/javascript" src="{{ asset('cabinetassets/js/jquery-ui-1.10.3.custom.js') }}"></script>
+
+<!-- Fun Facts Counter -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/counter.js') }}"></script>
+
+<!-- Welcome Tabs -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/tabs.js') }}"></script>
+
+
+<!-- All Carousel -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/owl.carousel.js') }}"></script>
+
+<!-- Mobile Menu -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/jquery.mmenu.min.all.js') }}"></script>
+
+<!-- All Scripts -->
+<script type="text/javascript" src="{{ asset('cabinetassets/js/custom.js') }}"></script>
+
+<script>
+
+</script>
+
+</body>
+
+<!-- Mirrored from wahabali.com/work/medical-guide/index4.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 13 Dec 2018 21:21:55 GMT -->
+</html>

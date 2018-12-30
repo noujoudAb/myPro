@@ -1,0 +1,58 @@
+{% extends "@Cabinetabinet/layout.html.twig" %}
+
+{% block baw %}
+    {#{{ form_start(form, {'method': 'post', 'action': path('cabinetabinet_registration_secretary'), 'attr': {'class': 'fos_user_registration_register'}}) }}#}
+    {#{{ form_widget(form) }}#}
+    {#<div>#}
+    {#<input type="submit" value="Submit" />#}
+    {#</div>#}
+    {#{{ form_end(form) }}#}
+
+    <!--Start Content-->
+    <div class="content">
+
+
+
+        <div class="main-appointment-form">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title text-center">
+                            <h2><span>List</span> Appointment</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="icon-center">
+                            <div class="appoint-icon">
+                                <i class="icon-clipboard"></i>
+                            </div></div>
+
+                        <div class="appointment-form">
+
+                            <div class="form">
+
+                                <section class="bgcolor-a">
+
+                                    {{ form(f) }}
+                                </section>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!--End Content-->
+
+{% endblock baw %}

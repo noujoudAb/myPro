@@ -1,0 +1,75 @@
+{% extends "@Cabinetabinet/layout.html.twig" %}
+
+{% block baw %}
+    {#{{ form_start(form, {'method': 'post', 'action': path('cabinetabinet_registration_secretary'), 'attr': {'class': 'fos_user_registration_register'}}) }}#}
+    {#{{ form_widget(form) }}#}
+    {#<div>#}
+    {#<input type="submit" value="Submit" />#}
+    {#</div>#}
+    {#{{ form_end(form) }}#}
+
+    <!--Start Content-->
+    <div class="content">
+
+
+
+        <div class="main-appointment-form">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="main-title text-center">
+                            <h2><span>Add</span> Appointment</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="icon-center">
+                            <div class="appoint-icon">
+                                <i class="icon-clipboard"></i>
+                            </div></div>
+
+                        <div class="appointment-form">
+
+                            <div class="form">
+
+                                <section class="bgcolor-a">
+
+                                    <form action="{{ path("cabinetabinet_addrdv") }}" method="post">
+                                        {#{{ form_start(form, {'method': 'post', 'action': path('cabinetabinet_addrdv')}) }}#}
+
+                                    <span class="input input--kohana">
+                                        {#{{ form_widget(form.created_at, {'attr': {'class': 'input__field input__field--kohana', 'id': 'datepicker', 'placeholder':'Appointment Date', 'name': 'datepicker'}}) }}#}
+                                    {#<input class="input__field input__field--kohana" type="text" id="username" name="_username" value="{{ last_username }}" required="required" autocomplete="username" />#}
+                                        {{ form(f) }}
+				</span>
+
+
+
+                                    {#<div>#}
+                                        {#<input type="submit" value="Submit" />#}
+                                    {#</div>#}
+
+                                    {#{{ form_end(form) }}#}
+
+                                    </form>
+                                </section>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+    </div>
+    <!--End Content-->
+
+{% endblock baw %}
